@@ -1,0 +1,9 @@
+# title = Darwin and natural selection (title in txt file)
+http://anthro.palomar.edu/evolve/evolve_2.htm
+# Wikipedia page about Charles Darwin (comment in txt file)
+http://en.wikipedia.org/wiki/Charles_Darwin
+#http://www.theatlantic.com/technology/archive/2012/06/a-perfect-and-beautiful-machine-what-darwins-theory-of-evolution-reveals-about-artificial-intelligence/258829/
+#http://www.guardian.co.uk/commentisfree/andrewbrown/2011/oct/15/creationist-disproof-darwin-evolution
+#http://darwin-online.org.uk/
+#http://www.darwins-theory-of-evolution.com/
+#http://www.spaceandmotion.com/Charles-Darwin-Theory-Evolution.htm
