@@ -216,6 +216,7 @@ class EpubFactory():
         # The EPUB must contain the META-INF and mimetype files at the root, so
         # we'll create the archive in the working directory first
         # and move it later
+        current_cwd = os.getcwd()
         os.chdir(self.root_directory)
 
         # Open a new zipfile for writing
@@ -228,15 +229,15 @@ class EpubFactory():
         # using normal ZIP compression
         self._scan_dir('.', epub)
         epub.close()
+        shutil.move(epub_name, current_cwd)
 
     def _scan_dir(self, path, epub_file):
         for p in os.listdir(path):
-            print "P", p
-            if os.path.isdir(os.path.join(path, p)):
-                self._scan_dir(os.path.join(path, p), epub_file)
-            else:
-                if p != 'mimetype':
-                    epub_file.write(os.path.join(path, p),
+            pp = os.path.join(path, p)
+            if os.path.isdir(pp):
+                self._scan_dir(pp, epub_file)
+            elif p != 'mimetype':
+                epub_file.write(os.path.join(path, p),
                             compress_type=zipfile.ZIP_DEFLATED)
 
     def clean_html_file(self, file_name, dest_directory):

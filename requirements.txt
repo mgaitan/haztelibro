@@ -1,4 +1,2 @@
-BeautifulSoup==3.2.1
-lxml==2.3.4
-readability-lxml==0.2.6
-wsgiref==0.1.2
+pyquery
+readability-lxml

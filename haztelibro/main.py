@@ -43,6 +43,7 @@ def urls2epub(input_file, out_file=None, title='Demo', creator='pycamp 2012', la
             idx += 1
     epf = EpubFactory(title, creator, language)
     epf.make_epub(htmls)
+    import ipdb; ipdb.set_trace()
     if not out_file:
         out_file = title.replace(' ', '_')
     epf.create_archive(out_file)
